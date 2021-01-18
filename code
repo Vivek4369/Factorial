@@ -1,0 +1,21 @@
+//WAP that calculates the factorial of a given number using recursion
+#include<stdio.h>
+
+int fact(int n);
+int main()
+{
+    int n;
+    printf("Enter the number =\n");
+    scanf("%d",&n);
+
+    printf("The factorial of %d is = %d",n,fact(n));
+}
+
+int fact(int n)
+{
+    int factorial =1;
+    if(n==1)
+    return 1;
+    factorial = n * fact(n-1);
+    return factorial;
+}
